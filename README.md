@@ -61,7 +61,7 @@ Run the interactive installer directly on your fresh Ubuntu VPS:
 
 ```bash
 # One-line remote installer:
-bash <(curl -fsSL https://raw.githubusercontent.com/jukgamer200-gif/Rexa-dash-test/main/installer.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/jukgamer200-gif/testdash/main/installer.sh)
 
 # Or from cloned repository:
 sudo bash installer.sh
