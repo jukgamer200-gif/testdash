@@ -36,10 +36,9 @@ fi
 
 echo -e "${CLR_CYAN}[2/5] Updating repository source code...${CLR_RESET}"
 if [ -d .git ]; then
-    CURRENT_REMOTE=$(git remote get-url origin 2>/dev/null || echo "")
-    if [[ "$CURRENT_REMOTE" == *"rexacloud/panel"* || -z "$CURRENT_REMOTE" ]]; then
-        echo "Updating Git remote origin to https://github.com/jukgamer200-gif/Rexa-dash-test.git..."
-        git remote set-url origin https://github.com/jukgamer200-gif/Rexa-dash-test.git 2>/dev/null || git remote add origin https://github.com/jukgamer200-gif/Rexa-dash-test.git
+    if [[ "$CURRENT_REMOTE" == *"rexacloud/panel"* || "$CURRENT_REMOTE" == *"Rexa-dash-test"* || -z "$CURRENT_REMOTE" ]]; then
+        echo "Updating Git remote origin to https://github.com/jukgamer200-gif/testdash.git..."
+        git remote set-url origin https://github.com/jukgamer200-gif/testdash.git 2>/dev/null || git remote add origin https://github.com/jukgamer200-gif/testdash.git
     fi
     git fetch origin main || git fetch --all
     git reset --hard origin/main || git pull

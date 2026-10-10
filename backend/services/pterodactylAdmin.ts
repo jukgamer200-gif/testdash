@@ -246,11 +246,7 @@ export const pterodactylAdmin = {
   },
 
   async createServer(payload: CreateServerRequest) {
-    if (!this.isConfigured()) {
-      throw new Error('Pterodactyl Application API is not configured.');
-    }
-
-    // Enforce 32 GB RAM limit (32768 MB)
+    // 1. Enforce strict 32 GB RAM limit (32768 MB)
     const MAX_RAM_MB = 32768;
     const memory = Number(payload.limits?.memory);
     if (!Number.isInteger(memory) || memory <= 0) {
@@ -258,6 +254,10 @@ export const pterodactylAdmin = {
     }
     if (memory > MAX_RAM_MB) {
       throw new Error(`Maximum server RAM allocation is 32 GB (${MAX_RAM_MB} MB). Requested: ${memory} MB.`);
+    }
+
+    if (!this.isConfigured()) {
+      throw new Error('Pterodactyl Application API is not configured.');
     }
 
     // Resolve allocation ID

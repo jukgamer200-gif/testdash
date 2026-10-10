@@ -9,8 +9,8 @@
 set -Eeuo pipefail
 
 # Project Repository Configuration
-REPO_URL="https://github.com/jukgamer200-gif/Rexa-dash-test.git"
-ARCHIVE_URL="https://github.com/jukgamer200-gif/Rexa-dash-test/archive/refs/heads/main.tar.gz"
+REPO_URL="https://github.com/jukgamer200-gif/testdash.git"
+ARCHIVE_URL="https://github.com/jukgamer200-gif/testdash/archive/refs/heads/main.tar.gz"
 
 # Terminal ANSI Color Codes
 CLR_RESET="\033[0m"

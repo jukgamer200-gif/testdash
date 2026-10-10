@@ -42,9 +42,9 @@ export const FileEditorModal: React.FC<FileEditorModalProps> = ({
     setSavedSuccess(false);
     try {
       const res = await api.getFileContents(serverIdentifier, filePath);
-      setContent(typeof res === 'string' ? res : ((res as any)?.content ?? ''));
-    } catch (err: any) {
-      setError(err.message || 'Failed to load file content');
+      setContent(res);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load file content');
     } finally {
       setIsLoading(false);
     }
