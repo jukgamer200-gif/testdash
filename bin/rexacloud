@@ -1,0 +1,5 @@
+#!/bin/bash
+# RexaCloud System Command Runner
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+cd "$DIR"
+exec npx tsx "$DIR/cli.ts" "$@"

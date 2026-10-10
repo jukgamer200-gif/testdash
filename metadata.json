@@ -1,0 +1,7 @@
+{
+  "name": "RexaCloud — Game Server Management Panel",
+  "description": "Premium black and purple game server management platform with live console, file manager, server creation wizard, and administrator controls backed by Pterodactyl.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
